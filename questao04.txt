@@ -1,0 +1,34 @@
+Questão 04:
+    É possível identificar qual interruptor pertence a qual lâmpada verificando a temperatura das lâmpadas.
+        Mantenho o primeiro sempre desligado.
+        Ligo o segundo por 30 minutos e depois desligo.
+        Ligo o terceiro.
+
+        Indo pela primeira vez em alguma sala:
+            Caso entre em uma sala apagada e a lâmpada estiver fria, essa lâmpada é referente ao primeiro interruptor.
+            Caso entre numa sala apagada e a lâmpada estiver quente, essa lâmpada é referente ao segundo interruptor.
+            Caso a lâmpada estiver acesa, essa lâmpada é referente ao terceiro interruptor.
+
+        Indo pela segunda vez em alguma sala diferente da sala da primeira ida:
+            Caso entre em uma sala apagada e a lâmpada estiver fria, essa lâmpada é referente ao primeiro interruptor.
+            Caso entre numa sala apagada e a lâmpada estiver quente, essa lâmpada é referente ao segundo interruptor.
+            Caso a lâmpada estiver acesa, essa lâmpada é referente ao terceiro interruptor.
+
+        Assim, descobre-se dois interruptores a depender da ordem das salas que eu entrar e verificar e o terceiro vem por eliminação (é o interruptor da sala que não entrei).
+
+    Sem usar o esquema de temperaturas, seria possível descobrir somente se (estando dois interruptores ligados) eu entrasse na primeira ou na segunda ida em uma sala apagada:
+        Dois interruptores estão ligados.
+
+        1) Indo pela primeira vez em uma sala. 
+        2) Caso entre em uma sala apagada, sei qual é o interruptor referente a essa sala.
+            2.1) Inverto o interruptor apagado com um dos ligados.
+            2.2) Vou pela segunda vez para uma sala diferente da que entrei primeiro. 
+                2.2.1) Caso entre em uma sala apagada, sei novamente qual interruptor referente a essa sala (o novo interruptor desligado). Por eliminação, descubro que o interruptor que mantive ligado é da sala que não fui.
+                2.2.2) Caso entre em uma sala acesa, sei que foi o interruptor que mantive ligado (pois o que estava ligado eu inverti com o interruptor apagado que eu já sei de qual sala é). Por eliminação, descubro que o interruptor da sala que não fui é o que agora está desligado.
+        3) Caso entre em uma sala acesa, volto.
+            3.1) Inverto um dos interruptores ligados.
+            3.2) Vou pela segunda vez em uma sala diferente da que entrei primeiro.
+                3.2.1) Caso entre em uma sala apagada, sei qual o interruptor referente a essa sala (o que está desligado) e sei que o da sala que entrei primeiro foi o que mantive ligado (pois se não fosse esse interruptor era a primeira sala que estaria desligada). Por eliminação, descubro que o interruptor que está acesso (além do que mantive aceso) é da sala que não fui.
+                3.2.2) Caso entre em uma sala acesa, não é possível identificar qual interruptor é referente a ela.
+
+

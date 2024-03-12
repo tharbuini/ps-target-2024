@@ -1,0 +1,2 @@
+Questão 01:
+    O resultado da operação é 91 (somatório de 1 a 13).
